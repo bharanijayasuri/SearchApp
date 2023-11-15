@@ -6,7 +6,7 @@ namespace SearchApp.Services.Interfaces
     {
         public List<DataSourceObject> GetDataSource();
 
-        public Task<IPrepareDataSourceService> Prepare();
+        public Task<IPrepareDataSourceService> Prepare(string fileName);
 
         public IPrepareDataSourceService FlattenDataSource();
 

@@ -21,7 +21,7 @@ builder.Services.AddCors(p => p.AddPolicy("clientapp", builder =>
 var app = builder.Build();
 
 var prepareDataSource = app.Services.GetRequiredService<IPrepareDataSourceService>();
-(await prepareDataSource.Prepare()).FlattenDataSource();
+(await prepareDataSource.Prepare("DataSource.json")).FlattenDataSource();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -31,6 +31,7 @@ namespace SearchApp.Services
             catch (Exception msg)
             {
                 _logger.LogError(msg.Message);
+                throw;
             }
             return this;
         }
@@ -45,11 +46,11 @@ namespace SearchApp.Services
             return _flattenedDataSource;
         }
 
-        public async Task<IPrepareDataSourceService> Prepare()
+        public async Task<IPrepareDataSourceService> Prepare(string fileName)
         {
             try
             {
-                var file = await File.ReadAllTextAsync("DataSource.json");
+                var file = await File.ReadAllTextAsync(fileName);
 
                 if (!string.IsNullOrWhiteSpace(file))
                 {
@@ -59,6 +60,7 @@ namespace SearchApp.Services
             catch (Exception msg)
             {
                 _logger.LogError(msg.Message);
+                throw;
             }
             return this;
         }
