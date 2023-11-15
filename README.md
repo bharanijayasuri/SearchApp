@@ -8,6 +8,6 @@ Load the solution in VisualStudio and debug (F5) or start without debugging (ctr
 
 ## Tests
 
-There is a separate project called SearchAppTests which uses NUnit testing framework to unit test the functions in SearchService and methods in SearchController.
+There is a separate project called SearchAppTests which uses NUnit testing framework to unit test the functions in SearchService, PrepareDataSourceService and the SearchController.
 
 
